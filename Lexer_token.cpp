@@ -69,8 +69,6 @@ static int gettok()
 
                 test = NumVal * pow(10, secondplace) + PrevVal * pow(10, place);
                 // test = test + PrevVal;
-                place++;
-                secondplace++;
             }
             // std::cout << "cout << " << LastChar <<" - 48 -->"<<NumVal<<" * 10 + "<<PrevVal<<" = "<<test<< std::endl;
             if (PrevVal == 0)
