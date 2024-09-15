@@ -1,0 +1,15 @@
+Say we are given the digits 348250 in sucession from a token that takes one digit per token.
+How would we transform 3,4,8,2,5,0 into 348,250.
+We have to first Multiply 3 * pow(1,10) + 4 * pow(0,10), this works for the first two numbers. But this is not going to work for all numbers, it only covers
+the tens and digits place. But there is a fix for this.
+If we store the value we get into another double integer.
+like 
+test = NumVal * pow(10, secondplace) + PrevVal * pow(10, place); 
+numval refering to our current value: 2
+prevval refering to our previous value: 4
+we are essentially taking numval, which is the previous test value in Numval: and assignment current test value to
+Numval * 10 + prevval * 1; 
+A simple expression would be
+Previous Numval =  current Numval * 10 + prevVal.
+But remember out Numval and prevVal are constantly geting new digits from our input tokens, so any value assigned will be lost.
+This is why Test holds the Numval of the digits entered and stores it. This allows us to store more than the tenhs and digits place.
